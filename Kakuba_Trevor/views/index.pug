@@ -1,0 +1,64 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title COVID-19
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
+  link(rel='stylesheet' href='/css/main.css')
+form.corona(style='margin-top:15px;' action='/' method='post' name='covid')
+  .container
+    .row
+      .col-lg-12
+        img(src='/images/form-header-image.png' width='100%' height='100%')
+    
+  div
+    h6(style='text-align: center;')
+      | Ministry of Health
+  div
+    h3(style='text-align: center; font-weight:bold;')
+      | COVID19(CORONA VIRUS)
+  div
+    h6(style='text-align: center;')
+      | Virus-Test Registration Form
+  .form-row(style='margin-left:20px; margin-right:20px;')
+    .form-group.col-md-6
+      label(for='name') Surname
+      input#surnames.form-control(type='text' name='surname')
+    .form-group.col-md-6
+      label(for='name') Given name
+      input#given-names.form-control(type='text' name='given_name'  )
+  .form-row(style='margin-left:20px; margin-right:20px;')
+    .form-group.col-md-6
+      label(for='name') Date of birth
+      input#date.form-control(type='text' name='dateofbirth' placeholder='YY/MM/DD' )
+    .form-group.col-md-6
+      label(for='name') Place of residence
+      input.form-control(type='text' id='residence' name='placeofresidence' )
+  .form-row(style='margin-left:20px; margin-right:20px;')
+    .form-group.col-md-6
+      label(for='name') Occupation
+      input.form-control(type='text' id='occupation' name='occupation' )
+    .form-group.col-md-6
+      label(for='name') Nationality
+      input.form-control(type='text' id='nationality' name='nationality' )
+  .form-row(style='margin-left:20px; margin-right:20px;')
+    .form-group.col-md-6
+      label(for='name') Gender
+      input(type='radio' name='gender' value='male' )
+      | Male
+      input(type='radio' style='margin-left: 150px;' name='gender' value='female')
+      | Female
+  .form-row(style='margin-left:20px; margin-right:20px;')
+    .form-group.col-md-12
+      label(for='name') Category
+      select.form-control(name='category' id='category' placeholder='--Select Category--')
+        option(value='default') --Select Category--
+        option(value='returnee') Returnee
+        option(value='contact') Contact
+        option(value='volunteer') Volunteer
+        option(value='alert') Alert
+        
+        
+
+  input.btn.btn-primary(type='submit' value='Register' style='margin-left: 510px; margin-bottom: 3px; padding:3px 60px;')
+  
